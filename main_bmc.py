@@ -438,7 +438,7 @@ def create_rl_sampler(config, dataset, latents=None, tokenizer=None):
                 if self.num_arms >= len(self.targets):
                     raise ValueError("""
                                     !!!WARNING!!!
-                                    BMC-T is being used, but the length of the training dataset is equal or less thanself.targets when it should be strictly greater.
+                                    BMC-T is being used, but the length of the training dataset is equal or greater than self.targets when it should be strictly smaller.
                                     It is highly likely you are training on the test set (somehow). Either that, or you passed in an empty target set?
                                     Please re-validate.
                                     !!!WARNING!!!
