@@ -150,8 +150,17 @@ These metrics were computed in a separate post-processing pipeline. The analysis
 
 ## Citation
 
+If you found this repository or the paper useful in your research, please cite:
 ```bixtex
-Coming soon.
+@misc{mckenzie2026manifoldbanditsbayesiancurriculum,
+      title={Manifold Bandits: Bayesian Curriculum Learning over the Latent Geometry of Large Language Models}, 
+      author={Darrien McKenzie and Nicklas Hansen and Xiaolong Wang},
+      year={2026},
+      eprint={2606.19750},
+      archivePrefix={arXiv},
+      primaryClass={cs.LG},
+      url={https://arxiv.org/abs/2606.19750}, 
+}
 ```
 
 
