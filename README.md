@@ -12,6 +12,9 @@
   <a href="https://github.com/DarrienMcKenzie/manifold-bandits/releases/tag/v0.1">
     <img src="https://img.shields.io/badge/Tree-Breakdowns-2ea44f.svg" alt="Tree Breakdowns">
   </a>
+  <a href="https://wandb.ai/ucsd-wang-lab-lm/manifold-bandits/reports/Manifold-Bandits-Training-Runs--VmlldzoxNzI4ODc3Mw?accessToken=o98c1xwc8bu5pmruz3d9fgglib13ofgi8o0l8ded90otmxh1mtbf5pqu8ulzuxet">
+  <img src="https://img.shields.io/badge/W%26B-Training%20Runs-FFBE00.svg" alt="W&B Training Runs">
+  </a>
 </p>
 
 <p align="center">
@@ -130,15 +133,19 @@ BMC-T, as you'd expect, inherits much of BMC. The two main parts to be aware of 
     * The *target file* can be anything: the evaluations / test file, a subset of the evaluations, a different dataset entirely, etc
 2) **Utility Computation**: utility is precomputed before training begins using overlap between train and target data
     * See combination of functions: `set_node_utility()`,`compute_subtree_counts()` ,`precompute_local_utilities()` in `main_bmc.py`
+3) **Train-Test Separation Validation**: curious to see if we accidently trained on the test data directly? See the code surrounding the `#BMC-T-VAL-1` and `#BMC-T-VAL-2` comments in `main_bmc.py`
 
 
 ## Questions and Issues
 
 If you have questions or run into setup issues, feel free to open an issue. You can also contact [d1mckenzie@ucsd.edu](mailto:d1mckenzie@ucsd.edu).
 
-## Training Logs
+## Diversity Metrics / Tree Diagnostics
 
-A curated W&B report for the main experiments will be released in a follow-up update.
+The diversity metrics reported in the paper (**rarity-weighted coverage** and **structure gain**), are not calculated or stored in W&B.
+
+These metrics were computed in a separate post-processing pipeline. The analysis scripts and visitation data will be provided in a future update.
+
 
 
 ## Citation

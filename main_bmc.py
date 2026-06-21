@@ -432,7 +432,7 @@ def create_rl_sampler(config, dataset, latents=None, tokenizer=None):
 
                 # DM: not taking chances...
 
-                # BMCT-VAL-2: checking if self.num_arms (which determines the valid indexes sampled) is equal to the TRAINING DATA only
+                # BMC-T-VAL-2: checking if self.num_arms (which determines the valid indexes sampled) is equal to the TRAINING DATA only
                 # the concatenated train+target data SHOULD NOT have been passed in to BanditSampler;
                 # thus, self.num_arms should be strictly less than len(self.targets)
                 if self.num_arms >= len(self.targets):
